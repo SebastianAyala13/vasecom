@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VASECOM - Impulsamos tus ideas, conectamos tu futuro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Calendar API -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="VASECOM.png" alt="VASECOM" class="logo-img">
+                <span class="logo-text">VASECOM</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#resultados" class="nav-link">Resultados</a>
+                <a href="#equipo" class="nav-link">Equipo</a>
+                <a href="#canales" class="nav-link">Canales</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-up">
+                    <span class="highlight">TRANSFORMAMOS</span> TU VISIÓN,
+                    <br>
+                    <span class="highlight">POTENCIAMOS</span> TU ÉXITO
+                </h1>
+                <p class="hero-subtitle animate-fade-up delay-1">
+                    Transformamos tu visión empresarial en resultados extraordinarios a través del ecommerce y la innovación digital
+                </p>
+                <div class="hero-buttons animate-fade-up delay-2">
+                    <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20comenzar%20mi%20transformación%20digital" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Comenzar Ahora
+                    </a>
+                    <button onclick="openBookingModal()" class="btn btn-secondary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Agendar Reunión
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fas fa-chart-line"></i>
+                        <span>+300% ROI</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>E-commerce</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-rocket"></i>
+                        <span>Automatización</span>
+                    </div>
+                    <div class="floating-card card-4">
+                        <i class="fas fa-users"></i>
+                        <span>Mentorías</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Descubre más</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-subtitle">Soluciones integrales para impulsar tu negocio digital</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Asesorías Especializadas</h3>
+                    <p>Consultoría estratégica personalizada para optimizar tu modelo de negocio y maximizar resultados</p>
+                    <div class="service-actions">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20información%20sobre%20asesorías" class="service-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <button onclick="openCalendarModal('asesoria')" class="service-link calendar-btn">
+                            <i class="fas fa-calendar-alt"></i>
+                            Agendar
+                        </button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Mentorías Ejecutivas</h3>
+                    <p>Acompañamiento personalizado para desarrollar habilidades de liderazgo y gestión empresarial</p>
+                    <div class="service-actions">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20me%20interesa%20una%20mentoría" class="service-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <button onclick="openCalendarModal('mentoria')" class="service-link calendar-btn">
+                            <i class="fas fa-calendar-alt"></i>
+                            Agendar
+                        </button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Sociedades Estratégicas</h3>
+                    <p>Formación de alianzas comerciales que potencien el crecimiento mutuo y la expansión de mercado</p>
+                    <div class="service-actions">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20explorar%20una%20sociedad" class="service-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <button onclick="openCalendarModal('sociedad')" class="service-link calendar-btn">
+                            <i class="fas fa-calendar-alt"></i>
+                            Agendar
+                        </button>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Inversionistas</h3>
+                    <p>Conectamos tu proyecto con inversionistas estratégicos para acelerar tu crecimiento empresarial</p>
+                    <div class="service-actions">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20busco%20inversionistas" class="service-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <button onclick="openCalendarModal('inversion')" class="service-link calendar-btn">
+                            <i class="fas fa-calendar-alt"></i>
+                            Agendar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultados" class="results">
+        <div class="container">
+            <div class="results-content">
+                <div class="results-text">
+                    <h2 class="section-title">Resultados que Hablan por Sí Solos</h2>
+                    <p class="section-subtitle">Nuestro compromiso con la excelencia se refleja en el éxito de nuestros clientes</p>
+                    <div class="results-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Estrategias probadas y efectivas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Acompañamiento personalizado 24/7</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resultados medibles y escalables</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tecnología de vanguardia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="300">0</div>
+                        <div class="stat-label">% Incremento ROI</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">+ Clientes Satisfechos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="95">0</div>
+                        <div class="stat-label">% Tasa de Éxito</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="48">0</div>
+                        <div class="stat-label">Meses de Experiencia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section id="equipo" class="leadership">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Equipo Directivo</h2>
+                <p class="section-subtitle">Los visionarios que impulsan el éxito de VASECOM</p>
+            </div>
+            
+            <!-- Founders Section -->
+            <div class="founders-section">
+                <h3 class="founders-title">Fundadores</h3>
+                <div class="founders-grid">
+                    <div class="leader-card founder-card ceo-card">
+                        <div class="founder-badge">
+                            <i class="fas fa-star"></i>
+                            <span>FUNDADOR</span>
+                        </div>
+                        <div class="leader-avatar">
+                            <img src="sebas.jpg" alt="Sebastian Ayala" class="avatar-img">
+                            <div class="avatar-overlay">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Sebastian Ayala</h3>
+                            <h4>CEO & Fundador | Full Stack Developer</h4>
+                            <p>Programador Full Stack especializado en negocios digitales. Visionario estratégico que combina desarrollo tecnológico avanzado con estrategias empresariales para transformar ideas en soluciones digitales exitosas.</p>
+                            <div class="leader-skills">
+                                <span class="skill-tag">Full Stack Development</span>
+                                <span class="skill-tag">Negocios Digitales</span>
+                                <span class="skill-tag">E-commerce</span>
+                                <span class="skill-tag">Estrategia Tech</span>
+                            </div>
+                            <div class="leader-contact">
+                                <a href="https://wa.me/573107736703?text=Hola%20Sebastian,%20me%20gustaría%20hablar%20contigo%20sobre%20VASECOM" class="contact-leader">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar Fundador
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leader-card founder-card cofounder-card">
+                        <div class="founder-badge">
+                            <i class="fas fa-star"></i>
+                            <span>FUNDADORA</span>
+                        </div>
+                        <div class="leader-avatar">
+                            <img src="valen.jpg" alt="Valentina Rios" class="avatar-img">
+                            <div class="avatar-overlay">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Valentina Rios</h3>
+                            <h4>CEO & Co-fundadora</h4>
+                            <p>Estratega empresarial y visionaria de negocios, co-arquitecta del crecimiento exponencial y la expansión de VASECOM.</p>
+                            <div class="leader-contact">
+                                <a href="https://wa.me/573123168898?text=Hola%20Valentina,%20me%20gustaría%20hablar%20contigo%20sobre%20VASECOM" class="contact-leader">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar Fundadora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h3 class="team-title">Equipo Ejecutivo</h3>
+                <div class="team-grid">
+                    <div class="leader-card team-card">
+                        <div class="leader-avatar team-avatar">
+                            <img src="jey.jpg" alt="Jeission Ayala" class="avatar-img">
+                            <div class="avatar-overlay">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Jeission Ayala</h3>
+                            <h4>Director de Operaciones</h4>
+                            <p>Especialista en logística avanzada y automatización inteligente, optimiza procesos para maximizar la eficiencia operacional.</p>
+                            <div class="leader-skills">
+                                <span class="skill-tag">Logística</span>
+                                <span class="skill-tag">Automatización</span>
+                                <span class="skill-tag">Procesos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leader-card team-card">
+                        <div class="leader-avatar team-avatar">
+                            <img src="kim.jpg" alt="Kimberly Marin" class="avatar-img">
+                            <div class="avatar-overlay">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                        </div>
+                        <div class="leader-info">
+                            <h3>Kimberly Marin</h3>
+                            <h4>Directora Creativa</h4>
+                            <p>Experta en branding estratégico y experiencia digital, crea identidades visuales memorables que conectan y convierten.</p>
+                            <div class="leader-skills">
+                                <span class="skill-tag">Branding</span>
+                                <span class="skill-tag">Diseño UX/UI</span>
+                                <span class="skill-tag">Marketing Visual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="leadership-cta">
+                <div class="cta-content">
+                    <h3>¿Listo para trabajar con los mejores?</h3>
+                    <p>Nuestro equipo directivo está disponible para proyectos estratégicos de alto impacto</p>
+                    <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20una%20consulta%20estratégica%20con%20su%20equipo%20directivo" class="btn btn-primary btn-large">
+                        <i class="fas fa-handshake"></i>
+                        Consulta Estratégica
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channels Section -->
+    <section id="canales" class="channels">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Canales de Venta Optimizados</h2>
+                <p class="section-subtitle">Maximiza tu alcance con nuestras plataformas integradas</p>
+            </div>
+            <div class="channels-grid">
+                <div class="channel-card whatsapp-card">
+                    <div class="channel-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Business</h3>
+                    <p>Venta directa y personalizada con automatización inteligente para maximizar conversiones</p>
+                    <ul class="channel-features">
+                        <li>Catálogo digital integrado</li>
+                        <li>Respuestas automatizadas</li>
+                        <li>Seguimiento de pedidos</li>
+                        <li>Atención personalizada 24/7</li>
+                    </ul>
+                    <div class="channel-cta">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20información%20sobre%20WhatsApp%20Business" class="btn btn-primary btn-small">
+                            Conocer Más
+                        </a>
+                    </div>
+                </div>
+                <div class="channel-card shopify-card">
+                    <div class="channel-icon">
+                        <i class="fab fa-shopify"></i>
+                    </div>
+                    <h3>Shopify Plus</h3>
+                    <p>Tienda online profesional con diseño premium y funcionalidades avanzadas de e-commerce</p>
+                    <ul class="channel-features">
+                        <li>Diseño responsive premium</li>
+                        <li>Integración con redes sociales</li>
+                        <li>Analytics avanzado</li>
+                        <li>Múltiples métodos de pago</li>
+                    </ul>
+                    <div class="channel-cta">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20información%20sobre%20Shopify%20Plus" class="btn btn-primary btn-small">
+                            Conocer Más
+                        </a>
+                    </div>
+                </div>
+                <div class="channel-card automation-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automatizaciones</h3>
+                    <p>Sistemas inteligentes que optimizan procesos y aumentan la eficiencia operacional</p>
+                    <ul class="channel-features">
+                        <li>Email marketing automatizado</li>
+                        <li>Gestión de inventario</li>
+                        <li>CRM integrado</li>
+                        <li>Reportes automáticos</li>
+                    </ul>
+                    <div class="channel-cta">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20información%20sobre%20automatizaciones" class="btn btn-primary btn-small">
+                            Conocer Más
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">¿Listo para Transformar tu Negocio?</h2>
+                    <p class="section-subtitle">Conecta con nosotros y comienza tu camino hacia el éxito digital</p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20información%20sobre%20asesorías" class="contact-method whatsapp-contact">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Asesorías WhatsApp</h4>
+                                <p>Consulta inmediata y personalizada</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20me%20interesa%20una%20mentoría" class="contact-method whatsapp-contact">
+                            <div class="method-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Mentorías</h4>
+                                <p>Desarrollo empresarial especializado</p>
+                            </div>
+                        </a>
+                        <div class="contact-method calendar-contact" onclick="openCalendarModal()">
+                            <div class="method-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Programar Reunión</h4>
+                                <p>Agenda una cita personalizada</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20explorar%20una%20sociedad" class="contact-method whatsapp-contact">
+                            <div class="method-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Sociedades</h4>
+                                <p>Alianzas estratégicas de crecimiento</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20busco%20inversionistas" class="contact-method whatsapp-contact">
+                            <div class="method-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Inversionistas</h4>
+                                <p>Financiamiento para tu proyecto</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <div class="cta-card">
+                        <h3>Impulsa tu Negocio Hoy</h3>
+                        <p>No esperes más para transformar tu visión en realidad</p>
+                        <div class="cta-buttons">
+                            <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20quiero%20comenzar%20mi%20transformación%20digital" class="btn btn-primary btn-large">
+                                <i class="fab fa-whatsapp"></i>
+                                Contactar por WhatsApp
+                            </a>
+                            <button onclick="openCalendarModal()" class="btn btn-secondary btn-large">
+                                <i class="fas fa-calendar-alt"></i>
+                                Programar Reunión
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="VASECOM.png" alt="VASECOM" class="footer-logo-img">
+                        <span class="footer-logo-text">VASECOM</span>
+                    </div>
+                    <p class="footer-tagline">Impulsamos tus ideas, conectamos tu futuro</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Servicios</h4>
+                        <a href="#servicios">Asesorías</a>
+                        <a href="#servicios">Mentorías</a>
+                        <a href="#servicios">Sociedades</a>
+                        <a href="#servicios">Inversionistas</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Canales</h4>
+                        <a href="#canales">WhatsApp Business</a>
+                        <a href="#canales">Shopify Plus</a>
+                        <a href="#canales">Automatizaciones</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <a href="https://wa.me/573107736703" class="whatsapp-link">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://www.instagram.com/vasecom_22?igsh=MTlsaWJqOHcycWN0Nw%3D%3D&utm_source=qr" target="_blank" class="instagram-link">
+                            <i class="fab fa-instagram"></i>
+                            @vasecom_22
+                        </a>
+                        <button onclick="openBookingModal()" class="calendar-link">
+                            <i class="fas fa-calendar-alt"></i>
+                            Agendar Reunión
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VASECOM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573107736703?text=Hola%20VASECOM,%20me%20gustaría%20obtener%20más%20información" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div id="calendarModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Programar Reunión con VASECOM</h3>
+                <span class="close" onclick="closeCalendarModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="meetingForm" onsubmit="scheduleMeeting(event)">
+                    <div class="form-group">
+                        <label for="name">Nombre Completo *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Empresa</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Tipo de Servicio *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Seleccionar servicio</option>
+                            <option value="asesoria">Asesoría Especializada</option>
+                            <option value="mentoria">Mentoría Ejecutiva</option>
+                            <option value="sociedad">Sociedad Estratégica</option>
+                            <option value="inversion">Búsqueda de Inversionistas</option>
+                            <option value="ecommerce">Consultoría E-commerce</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Fecha Preferida *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Hora Preferida *</label>
+                            <select id="time" name="time" required>
+                                <option value="">Seleccionar hora</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje (Opcional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Cuéntanos sobre tu proyecto o necesidades específicas..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeCalendarModal()">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-calendar-plus"></i>
+                            Programar Reunión
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>¡Reunión Programada!</h3>
+            <p>Hemos recibido tu solicitud de reunión. Te contactaremos pronto para confirmar los detalles.</p>
+            <div class="success-actions">
+                <a href="https://wa.me/573107736703" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Contactar por WhatsApp
+                </a>
+                <button onclick="closeSuccessModal()" class="btn btn-secondary">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+            <div class="booking-modal-header">
+                <h2>📅 Agenda tu Cita con VASECOM</h2>
+                <button onclick="closeBookingModal()" class="close-booking-btn">&times;</button>
+            </div>
+            <div class="booking-modal-body">
+                <div class="booking-info">
+                    <div class="booking-info-card">
+                        <div class="info-icon">🎯</div>
+                        <h4>Consultoría Especializada</h4>
+                        <p>Estrategias de ecommerce y desarrollo full-stack</p>
+                    </div>
+                    <div class="booking-info-card">
+                        <div class="info-icon">⚡</div>
+                        <h4>Respuesta Inmediata</h4>
+                        <p>Confirmación por email y WhatsApp</p>
+                    </div>
+                    <div class="booking-info-card">
+                        <div class="info-icon">💎</div>
+                        <h4>Primera Cita Gratuita</h4>
+                        <p>Sin costo para evaluar tu proyecto</p>
+                    </div>
+                </div>
+
+                <div class="booking-form-container">
+                    <form id="modernBookingForm" class="modern-booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientName">Nombre Completo *</label>
+                                <input type="text" id="clientName" name="name" required placeholder="Tu nombre completo">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientEmail">Email *</label>
+                                <input type="email" id="clientEmail" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="clientPhone">Teléfono</label>
+                                <input type="tel" id="clientPhone" name="phone" placeholder="+57 300 123 4567">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientDate">Fecha *</label>
+                                <input type="date" id="clientDate" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="clientTime">Hora *</label>
+                                <input type="time" id="clientTime" name="time" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientDuration">Duración</label>
+                                <select id="clientDuration" name="duration">
+                                    <option value="15">15 min - Consulta rápida</option>
+                                    <option value="30" selected>30 min - Consultoría estándar</option>
+                                    <option value="45">45 min - Consultoría extendida</option>
+                                    <option value="60">60 min - Sesión completa</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="clientNotes">Notas adicionales</label>
+                                <textarea id="clientNotes" name="notes" rows="3" placeholder="Cuéntanos sobre tu proyecto, objetivos o preguntas específicas..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-book-now" id="bookNowBtn">
+                                <span class="btn-text">🚀 Agendar Cita</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <div class="spinner"></div>
+                                    Agendando...
+                                </span>
+                            </button>
+                        </div>
+
+                        <div id="bookingMessage" class="booking-message" style="display: none;"></div>
+                    </form>
+
+                    <div class="alternative-contact">
+                        <p>¿Prefieres contacto directo?</p>
+                        <div class="contact-options">
+                            <a href="https://wa.me/573107736703?text=Hola%20Sebastian,%20quiero%20agendar%20una%20cita" target="_blank" class="contact-option sebastian">
+                                <div class="contact-avatar">💻</div>
+                                <div>
+                                    <strong>Sebastian Ayala</strong>
+                                    <span>CEO & Full Stack Developer</span>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/573123168898?text=Hola%20Valentina,%20quiero%20agendar%20una%20cita" target="_blank" class="contact-option valentina">
+                                <div class="contact-avatar">👩‍💼</div>
+                                <div>
+                                    <strong>Valentina Rios</strong>
+                                    <span>CEO & Co-fundadora</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Holographic Elements -->
+    <div class="holographic-overlay"></div>
+    
+    <script src="google-calendar-config.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Initialize Google APIs -->
+    <script>
+        // Callback para cuando se carga la API de Google
+        window.gapiLoaded = function() {
+            if (typeof gapiLoaded === 'function') {
+                gapiLoaded();
+            }
+        };
+        
+        // Callback para cuando se carga Google Identity Services
+        window.gisLoaded = function() {
+            if (typeof gisLoaded === 'function') {
+                gisLoaded();
+            }
+        };
+    </script>
+</body>
+</html>
