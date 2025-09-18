@@ -1056,28 +1056,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 auto;
     }
     
-    /* FORCE channels horizontal layout on desktop */
-    .channels-grid {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        align-items: stretch !important;
-        gap: 1.5rem !important;
-        max-width: 1100px !important;
-        margin: 0 auto !important;
-        padding: 0 1rem;
-    }
-    
-    .channel-card {
-        flex: 1 !important;
-        max-width: 350px !important;
-        min-width: 300px !important;
-        min-height: 450px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-    }
+    /* Channels already handled by main .channels-grid rule */
 }
 
 .hero::before {
@@ -2336,14 +2315,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .channels-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: center !important;
-    align-items: stretch !important;
-    gap: 1.5rem !important;
-    max-width: 1100px !important;
-    margin: 0 auto !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
@@ -2356,9 +2332,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     transform: translateY(0);
-    flex: 1;
-    max-width: 350px;
-    min-width: 300px;
     min-height: 450px;
     display: flex;
     flex-direction: column;
@@ -3427,154 +3400,22 @@ h1, h2, h3, h4, h5, h6 {
     .cta-content h3 {
         font-size: 1.5rem;
     }
-}
 
-/* CHANNELS HORIZONTAL SIMPLE - LIKE OTHER SECTIONS */
+/* CLEAN DESKTOP CHANNELS - HORIZONTAL LAYOUT */
 @media screen and (min-width: 769px) {
-    .channels {
-        background: linear-gradient(135deg, #f8f9fa 0%, #e9edef 50%, #dee2e6 100%);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .channels::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="channelsPattern" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1" fill="rgba(74,144,226,0.1)"/><circle cx="5" cy="5" r="0.5" fill="rgba(37,211,102,0.08)"/><circle cx="25" cy="25" r="0.8" fill="rgba(156,39,176,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23channelsPattern)"/></svg>');
-        animation: patternFloat 20s linear infinite;
-        z-index: 1;
-    }
-    
-    .channels .container {
-        position: relative;
-        z-index: 2;
-    }
-    
-    .channels .channels-grid {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        align-items: stretch !important;
+    .channels-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
         gap: 2rem !important;
         max-width: 1200px !important;
         margin: 0 auto !important;
         padding: 0 1rem !important;
     }
     
-    .channels .channel-card {
-        flex: 1 !important;
-        max-width: 380px !important;
-        min-width: 300px !important;
-        min-height: 450px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        padding: 2.5rem !important;
-        border-radius: var(--border-radius) !important;
-        box-shadow: var(--shadow-light) !important;
-        background: white !important;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        position: relative !important;
-        overflow: hidden !important;
-        justify-content: space-between !important;
-    }
-    
-    .channels .channel-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%);
-        transform: translateX(-100%);
-        transition: transform 0.6s ease;
-        z-index: 1;
-    }
-    
-    .channels .channel-card:hover::before {
-        transform: translateX(100%);
-    }
-    
-    .channels .channel-card:hover {
-        transform: translateY(-8px) scale(1.02) !important;
-        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2) !important;
-    }
-    
-    .channels .whatsapp-card {
-        border-image: linear-gradient(135deg, #25D366, #128C7E) 1 !important;
-    }
-    
-    .channels .shopify-card {
-        border-image: linear-gradient(135deg, #4A90E2, #357ABD) 1 !important;
-    }
-    
-    .channels .automation-card {
-        border-image: linear-gradient(135deg, #9C27B0, #673AB7) 1 !important;
-    }
-    
-    .channels .channel-icon {
-        width: 80px !important;
-        height: 80px !important;
-        margin-right: 0 !important;
-        margin-bottom: 1.5rem !important;
-        flex-shrink: 0 !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
-        transform: scale(1) !important;
-        transition: all 0.3s ease !important;
-    }
-    
-    .channels .channel-card:hover .channel-icon {
-        transform: scale(1.1) rotate(5deg) !important;
-    }
-    
-    .channels .channel-card h3 {
-        font-size: 2rem !important;
-        margin-bottom: 1rem !important;
-        background: linear-gradient(135deg, #2c3e50, #34495e) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
-    }
-    
-    .channels .channel-card p {
-        font-size: 1.1rem !important;
-        line-height: 1.7 !important;
-        margin-bottom: 1.5rem !important;
-        color: #5a6c7d !important;
-    }
-    
-    .channels .channel-features {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 0.5rem !important;
-        margin-bottom: 2rem !important;
-    }
-    
-    .channels .channel-features li {
-        font-size: 0.95rem !important;
-        color: #6c757d !important;
-        font-weight: 500 !important;
-    }
-    
-    .channels .channel-features li::before {
-        color: var(--accent-color) !important;
-        font-size: 1.2rem !important;
-        margin-right: 0.8rem !important;
-    }
-    
-    @keyframes patternFloat {
-        0% { transform: translateX(0) translateY(0); }
-        25% { transform: translateX(-10px) translateY(-5px); }
-        50% { transform: translateX(5px) translateY(-10px); }
-        75% { transform: translateX(-5px) translateY(5px); }
-        100% { transform: translateX(0) translateY(0); }
+    .channel-card {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
     }
 }
 
