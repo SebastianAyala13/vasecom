@@ -2024,9 +2024,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .channels-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .channel-card {
@@ -2038,6 +2042,13 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     transform: translateY(0);
+    flex: 0 0 320px;
+    max-width: 380px;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .channel-card::before {
@@ -2765,7 +2776,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .channels-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .channel-card {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 350px !important;
     }
 
     .footer-content {
@@ -2991,7 +3012,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .channels-grid {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .channel-card {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 350px !important;
     }
 
     .results-stats {
