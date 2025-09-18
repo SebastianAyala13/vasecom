@@ -1,4 +1,3 @@
 app/
 *.md
 .gitignore
-google-calendar-config.js
