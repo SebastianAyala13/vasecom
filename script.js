@@ -887,25 +887,35 @@ function openBookingModal() {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
-    // Set minimum date to today
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('clientDate').min = today;
+    // Track Calendly modal opening
+    console.log('📅 Opening Calendly booking modal - 100% FREE');
 }
 
 function closeBookingModal() {
     const modal = document.getElementById('bookingModal');
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
-    
-    // Reset form
-    document.getElementById('modernBookingForm').reset();
-    document.getElementById('bookingMessage').style.display = 'none';
 }
 
-// Handle booking form submission
+// Calendly integration and event handling
 document.addEventListener('DOMContentLoaded', function() {
-    const bookingForm = document.getElementById('modernBookingForm');
+    // Listen for Calendly events for better UX
+    window.addEventListener('message', function(e) {
+        if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+            console.log('Calendly event:', e.data.event);
+            
+            // Close modal when event is scheduled
+            if (e.data.event === 'calendly.event_scheduled') {
+                setTimeout(() => {
+                    closeBookingModal();
+                    showNotification('✅ ¡Cita agendada exitosamente! Revisa tu email para confirmación.');
+                }, 1000);
+            }
+        }
+    });
     
+    // Legacy form handling (if needed)
+    const bookingForm = document.getElementById('modernBookingForm');
     if (bookingForm) {
         bookingForm.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -998,3 +1008,33 @@ window.addEventListener('load', () => {
         });
     });
 });
+
+// Show notification function for Calendly success
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #00ff88, #1abc9c);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        z-index: 10001;
+        font-weight: 600;
+        max-width: 300px;
+        text-align: center;
+        font-size: 0.9rem;
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transform = 'translateX(100%)';
+        notification.style.transition = 'all 0.3s ease-in';
+        setTimeout(() => notification.remove(), 300);
+    }, 5000);
+}

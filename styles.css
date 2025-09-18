@@ -260,6 +260,49 @@ body * {
     animation: modalFadeIn 0.3s ease-out;
 }
 
+/* Calendly Integration Styles */
+.calendly-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.calendly-note {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(0, 255, 136, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.calendly-note p {
+    margin: 0 0 0.5rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.calendly-external-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #00ff88, #1abc9c);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+}
+
+.calendly-external-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+    background: linear-gradient(135deg, #1abc9c, #00ff88);
+}
+
 .booking-modal-content {
     position: relative;
     background: white;

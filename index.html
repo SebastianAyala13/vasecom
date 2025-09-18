@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Google Calendar API -->
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Calendly integration - No API keys needed! -->
 </head>
 <body>
     <!-- Navigation -->
@@ -633,83 +632,36 @@
                 <div class="booking-info">
                     <div class="booking-info-card">
                         <div class="info-icon">🎯</div>
-                        <h4>Consultoría Especializada</h4>
+                        <h4>Consultoría 100% GRATUITA</h4>
                         <p>Estrategias de ecommerce y desarrollo full-stack</p>
                     </div>
                     <div class="booking-info-card">
-                        <div class="info-icon">⚡</div>
-                        <h4>Respuesta Inmediata</h4>
-                        <p>Confirmación por email y WhatsApp</p>
+                        <div class="info-icon">📅</div>
+                        <h4>Agenda Inteligente</h4>
+                        <p>Selecciona horario disponible en tiempo real</p>
                     </div>
                     <div class="booking-info-card">
-                        <div class="info-icon">💎</div>
-                        <h4>Primera Cita Gratuita</h4>
-                        <p>Sin costo para evaluar tu proyecto</p>
+                        <div class="info-icon">⚡</div>
+                        <h4>Confirmación Automática</h4>
+                        <p>Email + WhatsApp + Recordatorios</p>
                     </div>
                 </div>
 
-                <div class="booking-form-container">
-                    <form id="modernBookingForm" class="modern-booking-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="clientName">Nombre Completo *</label>
-                                <input type="text" id="clientName" name="name" required placeholder="Tu nombre completo">
-                            </div>
-                        </div>
+                <!-- Calendly Embed Widget -->
+                <div class="calendly-container">
+                    <div class="calendly-inline-widget" 
+                         data-url="https://calendly.com/vasecom/consultoria-gratuita" 
+                         style="min-width:320px;height:600px;border-radius:15px;overflow:hidden;">
+                    </div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="clientEmail">Email *</label>
-                                <input type="email" id="clientEmail" name="email" required placeholder="tu@email.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="clientPhone">Teléfono</label>
-                                <input type="tel" id="clientPhone" name="phone" placeholder="+57 300 123 4567">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="clientDate">Fecha *</label>
-                                <input type="date" id="clientDate" name="date" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="clientTime">Hora *</label>
-                                <input type="time" id="clientTime" name="time" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="clientDuration">Duración</label>
-                                <select id="clientDuration" name="duration">
-                                    <option value="15">15 min - Consulta rápida</option>
-                                    <option value="30" selected>30 min - Consultoría estándar</option>
-                                    <option value="45">45 min - Consultoría extendida</option>
-                                    <option value="60">60 min - Sesión completa</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="clientNotes">Notas adicionales</label>
-                                <textarea id="clientNotes" name="notes" rows="3" placeholder="Cuéntanos sobre tu proyecto, objetivos o preguntas específicas..."></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="submit" class="btn-book-now" id="bookNowBtn">
-                                <span class="btn-text">🚀 Agendar Cita</span>
-                                <span class="btn-loading" style="display: none;">
-                                    <div class="spinner"></div>
-                                    Agendando...
-                                </span>
-                            </button>
-                        </div>
-
-                        <div id="bookingMessage" class="booking-message" style="display: none;"></div>
-                    </form>
+                <div class="calendly-note">
+                    <p><strong>📝 Nota:</strong> Si no puedes ver el calendario, haz clic aquí:</p>
+                    <a href="https://calendly.com/vasecom/consultoria-gratuita" target="_blank" class="calendly-external-link">
+                        🔗 Abrir Calendly en nueva ventana
+                    </a>
+                </div>
 
                     <div class="alternative-contact">
                         <p>¿Prefieres contacto directo?</p>
@@ -741,24 +693,9 @@
     <!-- Holographic Elements -->
     <div class="holographic-overlay"></div>
     
-    <script src="google-calendar-config.js"></script>
     <script src="script.js"></script>
+    <!-- Google Calendar config removed - Using Calendly instead! -->
     
-    <!-- Initialize Google APIs -->
-    <script>
-        // Callback para cuando se carga la API de Google
-        window.gapiLoaded = function() {
-            if (typeof gapiLoaded === 'function') {
-                gapiLoaded();
-            }
-        };
-        
-        // Callback para cuando se carga Google Identity Services
-        window.gisLoaded = function() {
-            if (typeof gisLoaded === 'function') {
-                gisLoaded();
-            }
-        };
-    </script>
+    <!-- Calendly handles all scheduling automatically - No complex scripts needed! -->
 </body>
 </html>
