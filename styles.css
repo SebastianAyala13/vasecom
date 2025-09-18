@@ -1008,28 +1008,37 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: column;
         padding: 0;
         position: relative;
-        background: linear-gradient(180deg, 
-            transparent 0%, 
-            transparent 55%, 
-            #1a1a1a 55%, 
-            #2c3e50 75%, 
-            #34495e 100%
-        );
+        /* Imagen de fondo DIRECTA para asegurar que aparezca */
+        background: 
+            linear-gradient(180deg, 
+                transparent 0%, 
+                transparent 50%, 
+                rgba(26, 26, 46, 0.7) 50%, 
+                rgba(44, 62, 80, 0.9) 75%, 
+                #1a1a1a 100%
+            ),
+            url('grupo.jpg');
+        background-size: cover, cover;
+        background-position: center bottom, center 30%;
+        background-repeat: no-repeat, no-repeat;
     }
     
-    /* Imagen limpia arriba - 55% de la pantalla */
+    /* Overlay para mejor contraste del texto */
     .hero::before {
         content: '';
         position: absolute;
-        top: 80px; /* Espacio para navbar */
+        top: 0;
         left: 0;
         right: 0;
-        height: 55vh; /* 55% de la pantalla para la imagen */
-        background: url('grupo.jpg') center/cover no-repeat;
-        background-position: center 25%;
+        bottom: 0;
+        background: linear-gradient(180deg, 
+            rgba(0, 0, 0, 0.1) 0%, 
+            rgba(0, 0, 0, 0.2) 40%, 
+            rgba(0, 0, 0, 0.6) 60%, 
+            rgba(26, 26, 46, 0.9) 100%
+        );
         z-index: 1;
-        border-radius: 0 0 30px 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        pointer-events: none;
     }
 }
 
@@ -3178,7 +3187,7 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         justify-content: flex-end;
         min-height: 100vh;
-        padding: 0;
+        padding: 0 1rem 2rem 1rem;
         position: relative;
         z-index: 2;
         text-align: center;
@@ -3188,12 +3197,12 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
-        padding: 2rem 1.5rem;
+        padding: 2rem 0;
         position: relative;
         z-index: 3;
-        /* Posicionar en la parte inferior sobre el fondo oscuro */
-        margin-top: calc(55vh + 80px);
-        padding-bottom: 3rem;
+        /* Posicionar en la parte inferior */
+        margin-top: auto;
+        padding-bottom: 1rem;
     }
     
     /* Ocultar elementos flotantes originales en móvil */
@@ -3206,13 +3215,13 @@ h1, h2, h3, h4, h5, h6 {
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         grid-template-rows: 1fr 1fr !important;
-        gap: 1rem !important;
+        gap: 1.2rem !important;
         position: relative;
-        margin-top: 2.5rem;
+        margin-top: 1.5rem;
         z-index: 4;
         width: 100%;
-        max-width: 380px;
-        padding: 0 1rem;
+        max-width: 360px;
+        padding: 0;
     }
     
     .floating-cards .floating-card {
