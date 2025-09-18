@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://vasecom.vercel.app/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vasecom.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="es-co" href="https://vasecom.vercel.app/co/" />
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://vasecom.vercel.app/mx/" />
+    <xhtml:link rel="alternate" hreflang="es-ar" href="https://vasecom.vercel.app/ar/" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://vasecom.vercel.app/br/" />
+    <image:image>
+      <image:loc>https://vasecom.vercel.app/VASECOM.png</image:loc>
+      <image:title>VASECOM Logo</image:title>
+      <image:caption>Logo oficial de VASECOM - Transformación Digital</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://vasecom.vercel.app/grupo.jpg</image:loc>
+      <image:title>Equipo VASECOM</image:title>
+      <image:caption>Equipo fundador de VASECOM - Sebastian Ayala y Valentina Rios</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://vasecom.vercel.app/#servicios</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Results -->
+  <url>
+    <loc>https://vasecom.vercel.app/#resultados</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Our Story -->
+  <url>
+    <loc>https://vasecom.vercel.app/#historia</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Team -->
+  <url>
+    <loc>https://vasecom.vercel.app/#equipo</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Channels -->
+  <url>
+    <loc>https://vasecom.vercel.app/#canales</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://vasecom.vercel.app/#contacto</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Future Country-Specific Pages -->
+  <url>
+    <loc>https://vasecom.vercel.app/co/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-co" href="https://vasecom.vercel.app/co/" />
+  </url>
+
+  <url>
+    <loc>https://vasecom.vercel.app/mx/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://vasecom.vercel.app/mx/" />
+  </url>
+
+  <url>
+    <loc>https://vasecom.vercel.app/ar/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es-ar" href="https://vasecom.vercel.app/ar/" />
+  </url>
+
+  <url>
+    <loc>https://vasecom.vercel.app/br/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://vasecom.vercel.app/br/" />
+  </url>
+
+</urlset>

@@ -1,0 +1,66 @@
+# Robots.txt for VASECOM - Optimized for Search Engines
+
+User-agent: *
+Allow: /
+
+# Priority crawling
+Allow: /#servicios
+Allow: /#resultados
+Allow: /#historia
+Allow: /#equipo
+Allow: /#canales
+Allow: /#contacto
+
+# Future international pages
+Allow: /co/
+Allow: /mx/
+Allow: /ar/
+Allow: /br/
+
+# Disallow sensitive or unnecessary files
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.env
+Disallow: *.log
+Disallow: /tmp/
+Disallow: /cache/
+
+# Allow important assets
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# Sitemap location
+Sitemap: https://vasecom.vercel.app/sitemap.xml
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block malicious bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
