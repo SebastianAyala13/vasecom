@@ -3423,3 +3423,38 @@ h1, h2, h3, h4, h5, h6 {
     .cta-content h3 {
         font-size: 1.5rem;
     }
+}
+
+/* FINAL OVERRIDE - Force channels horizontal on desktop */
+@media screen and (min-width: 769px) {
+    .channels .channels-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-evenly !important;
+        align-items: stretch !important;
+        gap: 2rem !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 2rem !important;
+    }
+    
+    .channels .channel-card {
+        flex: 1 1 320px !important;
+        max-width: 380px !important;
+        min-width: 300px !important;
+        width: auto !important;
+        margin: 0 !important;
+    }
+    
+    /* Ensure cards stay horizontal even on smaller desktop screens */
+    @media screen and (min-width: 1024px) {
+        .channels .channels-grid {
+            gap: 2.5rem !important;
+        }
+        
+        .channels .channel-card {
+            flex: 1 1 350px !important;
+        }
+    }
+}
