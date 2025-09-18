@@ -1554,9 +1554,9 @@ h1, h2, h3, h4, h5, h6 {
 .founders-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    max-width: 900px;
-    margin: 0 auto;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
 }
 
 /* Responsive: Stack on mobile */
@@ -1571,6 +1571,19 @@ h1, h2, h3, h4, h5, h6 {
     
     .founder-card {
         transform: scale(1) !important;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .team-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .team-card {
         max-width: 350px;
         margin: 0 auto;
     }
@@ -1638,7 +1651,25 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Team Section */
 .team-section {
+    margin-top: -2rem;
     margin-bottom: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.team-card {
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: scale(1) !important;
 }
 
 .team-title {
