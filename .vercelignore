@@ -1,5 +1,4 @@
 app/
-CONFIGURACION_CALENDAR.md
-GOOGLE_CALENDAR_SETUP.md
-README.md
+*.md
 .gitignore
+google-calendar-config.js
