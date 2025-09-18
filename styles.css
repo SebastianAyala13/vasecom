@@ -1000,33 +1000,40 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-/* Hero responsive para móvil */
+/* Hero responsive para móvil - FOTO ARRIBA LIMPIA */
 @media (max-width: 768px) {
     .hero {
-        background: url('grupo.jpg') center/cover no-repeat;
-        background-position: center 30%;
+        background: none;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 1rem;
+        padding: 0;
         position: relative;
     }
     
+    /* Imagen limpia arriba - 50% de la pantalla */
     .hero::before {
         content: '';
         position: absolute;
-        top: 0;
+        top: 70px; /* Espacio para navbar */
+        left: 0;
+        right: 0;
+        height: 50vh; /* 50% de la pantalla para la imagen */
+        background: url('grupo.jpg') center/cover no-repeat;
+        background-position: center 30%;
+        z-index: 1;
+        border-radius: 0 0 25px 25px; /* Bordes redondeados abajo */
+    }
+    
+    /* Área de contenido abajo - 50% restante */
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: calc(50vh + 70px);
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(
-            180deg, 
-            rgba(0, 0, 0, 0.1) 0%, 
-            rgba(0, 0, 0, 0.3) 40%, 
-            rgba(0, 0, 0, 0.8) 100%
-        );
+        background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 50%, #34495e 100%);
         z-index: 1;
     }
 }
@@ -3139,33 +3146,43 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .hero-title {
         font-size: clamp(2rem, 6vw, 3rem) !important;
-        background: rgba(0, 0, 0, 0.7) !important;
-        padding: 1rem 1.5rem !important;
+        background: none !important;
+        padding: 0 !important;
         margin-bottom: 1.5rem;
-        border-radius: 15px;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        color: white !important;
+        text-shadow: 
+            3px 3px 6px rgba(0, 0, 0, 1),
+            0 0 20px rgba(0, 0, 0, 0.8),
+            0 0 30px rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: none;
+        border: none;
+        font-weight: 800 !important;
+        line-height: 1.1;
     }
     
     .hero-subtitle {
         font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
-        background: rgba(0, 0, 0, 0.6) !important;
-        padding: 1rem 1.5rem !important;
+        background: none !important;
+        padding: 0 !important;
         margin-bottom: 2rem;
-        border-radius: 12px;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0;
+        color: rgba(255, 255, 255, 0.95) !important;
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 1),
+            0 0 15px rgba(0, 0, 0, 0.8) !important;
+        backdrop-filter: none;
+        border: none;
+        line-height: 1.4;
     }
     
     .hero-container {
         display: flex !important;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         min-height: 100vh;
-        padding: 2rem 1rem;
+        padding: 0;
         position: relative;
         z-index: 2;
         text-align: center;
@@ -3175,6 +3192,11 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         max-width: 420px;
         margin: 0 auto;
+        padding: 2rem 1rem;
+        position: relative;
+        z-index: 3;
+        /* Posicionar en la parte inferior sobre el fondo oscuro */
+        margin-top: calc(50vh + 70px);
     }
     
     /* Ocultar elementos flotantes originales en móvil */
@@ -3190,9 +3212,10 @@ h1, h2, h3, h4, h5, h6 {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
-        z-index: 3;
+        z-index: 4;
         width: 100%;
         max-width: 400px;
+        padding: 0 1rem;
     }
     
     .floating-cards .floating-card {
