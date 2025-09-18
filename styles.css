@@ -1000,6 +1000,25 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Desktop: Ensure founders are side by side */
+@media (min-width: 769px) {
+    .founders-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto 4rem auto;
+    }
+    
+    .team-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -2889,6 +2908,11 @@ h1, h2, h3, h4, h5, h6 {
     .leadership-grid {
         grid-template-columns: 1fr !important;
         gap: 1.5rem;
+    }
+    
+    /* Asegurar que founders-grid mantenga 2 columnas en desktop */
+    .founders-grid {
+        grid-template-columns: 1fr 1fr !important;
     }
     
     .services-grid {
