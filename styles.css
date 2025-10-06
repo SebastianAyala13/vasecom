@@ -489,7 +489,7 @@ body * {
 }
 
 .booking-info-card h4 {
-    color: #2c3e50;
+    color: #1B5E20;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -529,7 +529,7 @@ body * {
 
 .form-group label {
     font-weight: 600;
-    color: #2c3e50;
+    color: #1B5E20;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
@@ -613,9 +613,9 @@ body * {
 }
 
 .booking-message.success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background: #E8F5E9;
+    color: #1B5E20;
+    border: 1px solid #00C853;
 }
 
 .booking-message.error {
@@ -631,7 +631,7 @@ body * {
 }
 
 .alternative-contact p {
-    color: #6c757d;
+    color: #1B5E20;
     margin-bottom: 1rem;
     font-size: 0.9rem;
 }
@@ -654,23 +654,25 @@ body * {
 }
 
 .contact-option.sebastian {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-    color: #1565c0;
+    background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+    color: #1B5E20;
 }
 
 .contact-option.sebastian:hover {
-    border-color: #1565c0;
+    border-color: #00E676;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
 }
 
 .contact-option.valentina {
-    background: linear-gradient(135deg, #fce4ec, #f8bbd9);
-    color: #ad1457;
+    background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+    color: #1B5E20;
 }
 
 .contact-option.valentina:hover {
-    border-color: #ad1457;
+    border-color: #00C853;
     transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
 }
 
 .contact-avatar {
@@ -873,19 +875,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    background: linear-gradient(135deg, #00C853 0%, #1B5E20 100%);
     color: white;
-    border: 2px solid #4A90E2;
-    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+    border: 2px solid #00C853;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.4);
     font-weight: 600;
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #357ABD 0%, #2968A3 100%);
+    background: linear-gradient(135deg, #1B5E20 0%, #00C853 100%);
     color: white;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.6);
-    border-color: #357ABD;
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.6);
+    border-color: #00E676;
 }
 
 .btn-large {
@@ -1279,7 +1281,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Services Section */
 .services {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 20%, #34495e 40%, #2980b9 60%, #1abc9c 80%, #16a085 100%);
+    background: linear-gradient(135deg, #212121 0%, #1B5E20 20%, #00C853 40%, #00E676 60%, #00C853 80%, #1B5E20 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     position: relative;
@@ -1294,9 +1296,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(52, 152, 219, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(26, 188, 156, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(44, 62, 80, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(0, 230, 118, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 200, 83, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(27, 94, 32, 0.2) 0%, transparent 50%);
     animation: floatingBubbles 20s linear infinite;
     z-index: 1;
 }
@@ -1308,7 +1310,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="servicesPattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.5" fill="rgba(52,152,219,0.1)"/><circle cx="8" cy="8" r="0.8" fill="rgba(26,188,156,0.08)"/><circle cx="32" cy="32" r="1" fill="rgba(44,62,80,0.12)"/><rect x="15" y="15" width="1" height="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23servicesPattern)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="servicesPattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1.5" fill="rgba(0,230,118,0.15)"/><circle cx="8" cy="8" r="0.8" fill="rgba(0,200,83,0.12)"/><circle cx="32" cy="32" r="1" fill="rgba(27,94,32,0.18)"/><rect x="15" y="15" width="1" height="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23servicesPattern)"/></svg>');
     animation: patternMove 25s linear infinite;
     z-index: 1;
 }
@@ -1570,7 +1572,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, #ff69b4, #ff1493, #dc143c, #b22222);
+    background: linear-gradient(180deg, #00E676, #00C853, #1B5E20, #004D00);
     transform: translateX(-50%);
     border-radius: 2px;
 }
@@ -1600,7 +1602,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     font-size: 2rem;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-    border: 4px solid #ff69b4;
+    border: 4px solid #00E676;
     flex-shrink: 0;
     z-index: 3;
     position: relative;
@@ -1617,11 +1619,11 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     border: 2px solid transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #ff69b4, #ff1493) border-box;
+                linear-gradient(135deg, #00E676, #00C853) border-box;
 }
 
 .timeline-content h3 {
-    color: #2c3e50;
+    color: #1B5E20;
     font-size: 1.4rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -1634,7 +1636,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .timeline-content strong {
-    color: #ff1493;
+    color: #00E676;
     font-weight: 600;
 }
 
@@ -1654,7 +1656,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     border: 3px solid transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #ff69b4, #ff1493, #dc143c) border-box;
+                linear-gradient(135deg, #00E676, #00C853, #1B5E20) border-box;
     position: relative;
     overflow: hidden;
 }
@@ -1705,15 +1707,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .founder-mini-avatar:last-child {
-    border-color: #E91E63;
+    border-color: #00C853;
     margin-left: -15px;
 }
 
 .love-business-card h3 {
-    color: #2c3e50;
+    color: #1B5E20;
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    background: linear-gradient(135deg, #00E676, #00C853);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1794,7 +1796,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Leadership Section - Dynamic Background */
 .leadership {
     padding: 6rem 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 20%, #34495e 40%, #2980b9 60%, #1abc9c 80%, #16a085 100%);
+    background: linear-gradient(135deg, #212121 0%, #1B5E20 20%, #00C853 40%, #00E676 60%, #00C853 80%, #1B5E20 100%);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     position: relative;
@@ -1876,8 +1878,9 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #FFD700, #E91E63);
+    background: linear-gradient(90deg, #00E676, #00C853);
     border-radius: 2px;
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.6);
 }
 
 .founders-grid {
@@ -1954,8 +1957,8 @@ h1, h2, h3, h4, h5, h6 {
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    color: white;
+    background: linear-gradient(135deg, #00E676, #00C853);
+    color: #212121;
     padding: 0.8rem 2.5rem;
     border-radius: 30px;
     font-size: 0.8rem;
@@ -1969,13 +1972,14 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     min-width: 140px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 6px 20px rgba(0, 230, 118, 0.6);
     text-transform: uppercase;
 }
 
 .cofounder-card .founder-badge {
-    background: linear-gradient(135deg, #E91E63, #9C27B0);
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+    background: linear-gradient(135deg, #00C853, #1B5E20);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.5);
 }
 
 /* Team Section */
@@ -2103,11 +2107,11 @@ h1, h2, h3, h4, h5, h6 {
 .cofounder-card {
     border: 2px solid transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #E91E63, #9C27B0) border-box;
+                linear-gradient(135deg, #00C853, #1B5E20) border-box;
 }
 
 .cofounder-card::before {
-    background: linear-gradient(135deg, #E91E63, #9C27B0);
+    background: linear-gradient(135deg, #00C853, #1B5E20);
 }
 
 .leader-avatar {
@@ -2132,7 +2136,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cofounder-card .avatar-img {
-    border-color: #E91E63;
+    border-color: #00C853;
 }
 
 .avatar-overlay {
@@ -2157,7 +2161,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cofounder-card .avatar-overlay {
-    background: linear-gradient(135deg, #E91E63, #9C27B0);
+    background: linear-gradient(135deg, #00C853, #1B5E20);
 }
 
 .team-avatar .avatar-img {
@@ -2191,7 +2195,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cofounder-card .avatar-placeholder {
-    background: linear-gradient(135deg, #E91E63, #9C27B0);
+    background: linear-gradient(135deg, #00C853, #1B5E20);
 }
 
 .leader-card:hover .avatar-placeholder {
@@ -2226,7 +2230,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cofounder-card .leader-info h4 {
-    color: #E91E63;
+    color: #00C853;
 }
 
 .leader-info p {
